@@ -8,22 +8,17 @@ body {
   background-color: whitesmoke;
 }
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: auto;
-  gap: 8px;
-}
-.left {
-  background-color: whitesmoke;
-  grid-column: 1;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
 }
 .contact {
   background-color: #212121;
-  padding: 2px;
+  padding: 10px;
   width: 100%;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -31,31 +26,32 @@ body {
   margin-bottom: 5px;
 }
 .logos img {
-  width: 10px;
-  height: 10px;
+  width: 24px;
+  height: 24px;
   filter: grayscale(100%);
 }
 .telephone {
   display: flex;
   color: white;
-  gap: 5px;
-  font-size: 7px;
+  gap: 10px;
+  font-size: 14px;
 }
 .telephone span {
   color: white;
 }
 .telephone img {
-  margin-right: 5px;
+  margin-right: 7px;
   background-color: green;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 .call-back button {
   background-color: #8bc34a;
   border: none;
-  padding: 4px 6px;
+  padding: 6px 8px;
   color: white;
-  font-size: 8px;
+  font-size: 12px;
+  margin-right: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -65,35 +61,36 @@ body {
 .header {
   background-color: whitesmoke;
   padding: 10px;
-  width: 100%;
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .logo {
-  padding: 0;
-  background-color: darksalmon;
-  border: none;
-  border-radius: 3px;
-  gap: 3px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
 }
 .logo img {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   margin-right: 0;
+  border: none;
+  border-radius: 3px;
+  background-color: darksalmon;
 }
-.name {
-  font-size: 20px;
+.logo span {
+  font-size: 24px;
   font-family: sans-serif;
-  margin-left: 3px;
+  margin-left: 0;
   color: rgb(233, 126, 50);
   font-weight: bold;
 }
 .menu {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 .menu li {
   list-style: none;
@@ -101,67 +98,66 @@ body {
 .menu a {
   color: orange;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 5px;
 }
 .hero {
   text-align: center;
   background-color: rgb(243, 176, 52);
   width: 100%;
-  height: 14%;
   color: white;
+  padding: 20px;
 }
 .hero h1 {
-  padding: 50px;
-  padding-bottom: 20px;
-  font-size: 28px;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
   font-family: Times New Roman;
   font-weight: bold;
-  margin-bottom: 0;
   text-align: center;
 }
 .hero p {
-  padding-top: 0;
-  font-size: 14px;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 .hero button {
   background-color: white;
   color: crimson;
-  padding: 6px 6px;
+  padding: 10px 12px;
   border: none;
   cursor: pointer;
-  font-size: 12px;
-  border-radius: 4px;
+  font-size: 14px;
+  border-radius: 5px;
 }
 .advantages {
   background-color: lavender;
-  padding: 8px;
+  padding: 40px;
 }
 .advantages h1 {
-  font-size: 16px;
+  font-size: 1.25rem;
   color: firebrick;
   text-align: center;
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
 }
 .adv-item {
   text-align: center;
 }
 .adv-item img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 .adv-item span {
-  font-size: 12px;
+  font-size: 14px;
   display: block;
   margin-bottom: 8px;
   color: brown;
 }
 .adv-item p {
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
   color: black;
 }
@@ -173,40 +169,40 @@ body {
   align-self: start;
 }
 h1 {
-  margin-top: 3px;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   color: firebrick;
+  margin: 5px 0 20px 0;
 }
 .about {
   margin-top: 5px;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 20px;
 }
 .about p {
   font-family: sans-serif;
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
   color: black;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .about img {
   width: 50%;
-  height: 20%;
+  height: auto;
 }
 .services {
   margin-top: 0;
   background-color: lavender;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
 }
 .services h1 {
   margin-top: 0;
   color: firebrick;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 20px;
 }
 .items {
   display: flex;
@@ -216,46 +212,46 @@ h1 {
 .item {
   background-color: rgb(243, 219, 158);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
 }
 .item img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background-color: yellow;
 }
 .item h3 {
   color: white;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .item p {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: bold;
   color: gray;
   margin-bottom: 10px;
 }
 .item a {
   color: black;
-  font-size: 10px;
+  font-size: 12px;
   text-decoration: none;
   font-weight: bold;
 }
 .portfolio {
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
 }
 .portfolio h1 {
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 20px;
   color: #fff;
   align-items: center;
 }
 .portfolio p {
-  font-size: 10px;
+  font-size: 13px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -264,7 +260,7 @@ h1 {
   justify-content: space-between;
   text-align: center;
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: bold;
 }
 .dept li {
@@ -272,29 +268,24 @@ h1 {
 }
 .portfolio-item img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-}
-.Right {
-  background-color: whitesmoke;
-  grid-column: 2;
-  padding: 0;
 }
 .process {
   margin-top: 0;
   background-color: lavender;
-  padding: 30px;
+  padding: 40px;
   text-align: center;
 }
 .process h1 {
   margin-top: 0;
   color: firebrick;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 20px;
 }
 .process p {
   padding: 8px;
-  font-size: 12px;
+  font-size: 14px;
   color: rgb(51, 50, 50);
 }
 .process-items {
@@ -313,28 +304,28 @@ h1 {
 }
 .item1 img {
   padding-top: 10px;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
 }
 .item1 span {
   padding: 25px;
   text-align: center;
-  font-size: 10px;
+  font-size: 11px;
   color: firebrick;
 }
 .People {
-  padding: 10px;
+  padding: 20px;
   align-items: center;
   background-color: whitesmoke;
 }
 .People h1 {
-  font-size: 16px;
+  font-size: 20px;
   color: firebrick;
   text-align: center;
 }
 .People p {
-  padding: 8px;
-  font-size: 12px;
+  padding: 10px;
+  font-size: 14px;
   text-align: center;
   color: rgb(51, 50, 50);
 }
@@ -354,29 +345,28 @@ h1 {
   gap: 10px;
 }
 .person-logo img {
-  width: 17px;
-  height: 17px;
+  width: 20px;
+  height: 20px;
   border: 1px solid gray;
   border-radius: 50px;
 }
 .person-logo h2 {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   color: brown;
 }
 .person p {
-  font-size: 10px;
+  font-size: 12px;
   color: rgb(51, 50, 50);
   text-align: center;
-  padding-bottom: 0;
+  padding-bottom: 10px;
 }
 .skills {
-  padding: 5px;
+  padding: 10px;
   align-items: center;
-  padding-bottom: 0;
 }
 .skills h1 {
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
   color: firebrick;
 }
@@ -384,23 +374,21 @@ h1 {
   padding: 10px;
   text-align: center;
   color: rgb(51, 50, 50);
-  font-size: 12px;
+  font-size: 14px;
 }
 .skills img {
   width: 100%;
-  min-height: 20%;
+  min-height: auto;
   object-fit: cover;
 }
 .new-project {
-  margin-top: 0;
-  padding: 15px;
+  padding: 25px;
   color: white;
   background-color: rgb(243, 176, 52);
   text-align: center;
 }
 .new-project h1 {
-  margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 20px;
   color: white;
 }
 .new-project form {
@@ -411,42 +399,42 @@ h1 {
   margin-bottom: 10px;
 }
 .new-project form input {
-  padding: 10px;
-  font-size: 11px;
-  border-radius: 5px;
+  padding: 12px;
+  font-size: 12px;
+  border-radius: 8px;
   border: none;
 }
 .new-project form button {
   background-color: white;
   color: crimson;
   font-weight: bold;
-  border-radius: 5px;
-  padding: 10px 10px;
+  border-radius: 8px;
+  padding: 12px;
   border: none;
   cursor: pointer;
   font-size: 12px;
 }
 .new-project p {
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   color: rgb(51, 50, 50);
 }
 .our-contact {
-  padding: 10px;
+  padding: 20px;
   align-items: center;
   background-color: whitesmoke;
 }
 .our-contact h1 {
   padding: 5px;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   color: firebrick;
   padding-bottom: 2px;
 }
 .our-contact p {
   padding: 0;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   color: rgb(51, 50, 50);
 }
 .contact-address {
@@ -454,13 +442,13 @@ h1 {
   align-items: center;
 }
 .contact-address p {
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   color: rgb(51, 50, 50);
 }
 .contact-address img {
-  width: 17px;
-  height: 17px;
+  width: 22px;
+  height: 22px;
 }
 .contact-info {
   padding: 5px;
@@ -470,40 +458,39 @@ h1 {
   display: flex;
   justify-content: space-around;
   gap: 12px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .contact-info span {
   color: rgb(51, 50, 50);
 }
 .contact-info img {
   margin-right: 5px;
-  width: 17px;
-  height: 17px;
+  width: 22px;
+  height: 22px;
 }
 .map-container {
-  width: 100%;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 200px;
+  min-height: 300px;
 }
-iframe {
+.map-container iframe {
   flex-grow: 1;
   position: relative;
-  width: 700px;
-  height: 200px;
+  width: 100%;
+  height: 300px;
 }
 .footer-container {
   flex-shrink: 0;
   background-color: rgb(243, 176, 52);
   color: #fff;
-  padding: 10px 10px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 .footer-column {
   flex: 1;
-  padding: 1px 1px;
   width: 25%;
   margin-right: 5%;
   margin-bottom: 10%;
@@ -511,22 +498,22 @@ iframe {
 }
 .footer-column img {
   background-color: rgba(243, 176, 52);
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 .footer-column p {
-  line-height: 19px;
-  font-size: 11px;
+  line-height: 21px;
+  font-size: 14px;
   color: white;
-  padding-top: 8px;
-  margin-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
 }
 .footer-column span {
-  margin-top: 10px;
-  font-size: 13px;
+  margin-top: 20px;
+  font-size: 17px;
 }
 .footer-column h1 {
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -539,10 +526,13 @@ iframe {
 }
 .footer-column ul li {
   text-decoration: underline;
-  margin-top: 10px;
-  font-size: 14px;
+  margin: 0 10px;
+  font-size: 15px;
   color: white;
   text-align: center;
+}
+.footer-column ul li:hover {
+  text-decoration: underline;
 }
 .vertical-line {
   border-left: 2px solid white;
@@ -551,29 +541,103 @@ iframe {
   margin-right: 1px;
   margin-top: 10px;
 }
-
 .info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 8px;
+  font-size: 11px;
 }
 .info span {
   color: white;
 }
 .info img {
-  width: 11px;
-  height: 11px;
+  width: 20px;
+  height: 20px;
 }
 .icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 2px;
+  gap: 1px;
 }
 .icons img {
-  width: 23px;
-  height: 23px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   filter: grayscale(100%);
+}
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column; 
+    align-items: center;
+  }
+  .about {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .about p {
+    margin-right: 0; 
+  }
+  .about img {
+    width: 100%; 
+    height: auto; 
+  }
+  .services {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+  .items {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .process-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact {
+    flex-direction: column; 
+    align-items: center;
+  }
+  .adv-item {
+    margin-bottom: 10px; 
+  }
+  .item {
+    min-width: 100%; 
+  }
+  .dept {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+  .telephone {
+    margin-bottom: 5px;
+  }
+  .map-container iframe {
+    width: 100%;
+    height: 200px; 
+  }
+  .vertical-line {
+    border-left: none;
+    border-top: 2px solid white;
+    width: 50%; 
+    height: 0; 
+    margin: 10px 0;
+  }
+  .new-project form input,
+  .new-project form button {
+    width: 100%; 
+    margin-bottom: 8px;
+  }
+  .new-project form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info span {
+    font-size: 9px;
+  }
 }
